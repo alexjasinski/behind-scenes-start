@@ -1,6 +1,8 @@
+import {memo} from 'react';
+
 import { log } from '../../log.js';
 
-export default function IconButton({ children, icon, ...props }) {
+const IconButton = memo(function IconButton({ children, icon, ...props }) {
   log('<IconButton /> rendered', 2);
 
   const Icon = icon;
@@ -11,3 +13,5 @@ export default function IconButton({ children, icon, ...props }) {
     </button>
   );
 }
+);
+export default IconButton;
